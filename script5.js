@@ -1,17 +1,4 @@
-function sum(a, b) {
-    return a + b;
+let a = '';
+for (let i = 0; i < 20; i++) {
+    console.log(a += 'x');
 }
-
-function minus(a, b) {
-    return a - b;
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-function divide(a, b) {
-    return a / b;
-}
-
-alert(sum(2, 5));
