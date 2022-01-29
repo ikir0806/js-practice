@@ -1,18 +1,18 @@
-let a = 2;
-const n = 100;
-let i;
+let numberObject = {
+    'units': 0,
+    'dozens': 0,
+    'hundreds': 0
+}
+let number = prompt('Enter a number');
 
-while (a < n) {
-    i = 2;
-    while (i < a) {
-        if (((a / i) % 1 == 0)) {
-            i = null;
-            break;
-        }
-        i++;
-    }
-    if (i != null) {
-        console.log(a);
-    }
-    a++;
+if ((number < 0) || (number > 999)) {
+    alert('Wrong number!');
+}
+else numberToObject(number);
+
+function numberToObject(number) {
+    numberObject['units'] = number % 10;
+    numberObject['dozens'] = ((number % 100) - (number % 10)) / 10;
+    numberObject['hundreds'] = (number - (number % 100)) / 100;
+    console.log(numberObject);
 }
